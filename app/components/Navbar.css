@@ -1,0 +1,131 @@
+/* Styles généraux */
+.container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Mode sombre et clair */
+  .dark-mode {
+    background: #9c561c;
+    color: white;
+  }
+  
+  .light-mode {
+    background: white;
+    color: rgb(128, 104, 39);
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 250px;
+    height: 100vh;
+    background: #070b2322;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Cacher la navbar */
+  .hidden {
+    transform: translateX(-100%);
+  }
+  
+  /* Bouton pour afficher/masquer la navbar */
+  .toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 260px;
+    background: linear-gradient(45deg, #8e44ad, #c0392b);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background: linear-gradient(45deg, #c0392b, #8e44ad);
+  }
+  
+  /* Profil */
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-icon {
+    font-size: 50px;
+    color: white;
+  }
+  
+  .profile h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  /* Navigation */
+  .nav-links {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 15px; /* ESPACEMENT ENTRE LES ÉLÉMENTS */
+  }
+  
+  .nav-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  /* Couleurs des icônes (remplacement du bleu par du violet) */
+  .nav-links a:nth-child(1) { background: linear-gradient(45deg, #8e44ad, #9b59b6); } /* Violet */
+  .nav-links a:nth-child(2) { background: linear-gradient(45deg, #6c5ce7, #a29bfe); } /* Violet clair */
+  .nav-links a:nth-child(3) { background: linear-gradient(45deg, #e84393, #ff7675); } /* Rose */
+  .nav-links a:nth-child(4) { background: linear-gradient(45deg, #fd7e14, #f39c12); } /* Orange */
+  .nav-links a:nth-child(5) { background: linear-gradient(45deg, #f1c40f, #f39c12); } /* Jaune */
+  .nav-links a:nth-child(6) { background: linear-gradient(45deg, #2ecc71, #27ae60); } /* Vert */
+  
+  .nav-links a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  
+  /* Icônes */
+  .icon {
+    margin-right: 12px;
+    font-size: 22px;
+  }
+  
+  /* Bouton de mode sombre / clair */
+  .mode-toggle {
+    margin-top: auto;
+    padding: 12px;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 22px;
+  }
+  
+  .mode-toggle:hover {
+    background: linear-gradient(45deg, #ff6600, #ffcc00);
+  }
+  

@@ -1,0 +1,135 @@
+/* Reset Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background de la page */
+.bg-image {
+  background-image: url('https://i.pinimg.com/736x/71/4c/c5/714cc50fed680c7a9ef05ddce5cccfaa.jpg'); /* Remplace avec ton URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* Assure que l'image occupe toute la hauteur de la fenêtre */
+  display: flex;
+  align-items: center;  /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  padding: 0; /* Supprimer le padding pour le fond de l'image */
+
+  /* Conteneur central */
+  width: 100%;
+  height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+}
+
+.bg-image > * { 
+  width: 100%; /* Pour s'assurer que tout le contenu occupe 100% de la largeur */
+  max-width: 32rem; /* Limiter la largeur du formulaire */
+  background: transparent; /* Fond légèrement transparent */
+  backdrop-filter: blur(10px); /* Flou pour un design moderne */
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 20px rgba(16, 193, 19, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem; /* Padding du formulaire */
+}
+
+/* Couleur du texte général */
+body {
+  color: #333; /* Couleur du texte général */
+  font-family: Arial, sans-serif; /* Choisir une police de caractère */
+}
+
+/* Couleur du texte dans les titres */
+h1, h2, h3 {
+  color: #fff; /* Couleur du texte dans les titres */
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Couleur du texte dans les champs de saisie */
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+  outline: 2px solid #3b82f6;
+}
+
+/* Bouton */
+.submit-button {
+  width: 100%;
+  background-color: #f59e0b;
+  color: rgb(148, 16, 16);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #eab308;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Liens */
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #2563eb; /* Couleur des liens */
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Personnalisation de la taille des liens */
+.login-signup-text {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold; /* Gras */
+  margin: 0 1rem; /* Ajouter de l'espace entre les liens */
+  color: #9b8e05; /* Couleur des liens dans la zone de connexion / inscription */
+}
+
+.login-signup-text:hover {
+  color: #6e55ad; /* Couleur au survol */
+}
+
+/* Formulaire de texte large */
+.form-text-large {
+  font-size: 1.2rem; /* Ajustez la taille de la police à votre convenance */
+}
+
+/* Icônes */
+.icon {
+  color: #33054a; /* Couleur des icônes */
+  font-size: 1.5rem; /* Taille des icônes */
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #14bb89; /* Couleur des icônes au survol */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pb-8 {
+  padding-bottom: 2rem; /* 2rem équivalent à pb-8 de Tailwind */
+}
+
+.pt-8 {
+  padding-top: 2rem; /* 2rem équivalent à pt-8 de Tailwind */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+

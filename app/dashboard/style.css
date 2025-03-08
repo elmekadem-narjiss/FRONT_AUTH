@@ -1,0 +1,192 @@
+/* Global Styles - Dark Mode */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1e1e2e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1500;
+    width: 1500;
+}
+
+/* Layout Container */
+.min-h-screen {
+    background-color: #1e1e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Styles - Grid Layout */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Réduit l'espace entre les cartes */
+    justify-content: center; /* Centrer les cartes dans le conteneur */
+    margin-top: 0;
+}
+
+/* Card Base Styles */
+.card {
+    background-color: #2a2a3a;
+    padding: 1rem; /* Réduit le padding dans les cartes */
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(33% - 1rem); /* 3 cartes par ligne, taille plus petite */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px; /* Hauteur réduite pour les cartes */
+    max-width: 220px; /* Largeur réduite des cartes */
+    align-items: center;
+    text-align: center;
+}
+
+/* Typography in Cards */
+.card-title {
+    font-size: 1.25rem; /* Taille réduite du titre */
+    font-weight: 100;
+    color: #ffffff;
+    margin-bottom: 0.75rem; /* Réduit l'espace sous le titre */
+}
+
+.card-value {
+    font-size: 0.875rem; /* Taille réduite de la valeur */
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-footer {
+    font-size: 0.75rem; /* Taille réduite du texte dans le footer */
+    color: #a1a1aa;
+}
+
+/* ------------------ Metric Cards - Utility Classes */
+.bg-white {
+    background-color: #2a2a3a;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.rounded-xl {
+    border-radius: 1rem;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-2xl {
+    font-size: 1.25rem; /* Taille réduite du texte */
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-green-600 {
+    color: #34d399;
+}
+
+.text-red-600 {
+    color: #f87171;
+}
+
+.text-gray-800 {
+    color: #e0e0e0;
+}
+
+/* ------------------ Layout Flex Responsive ------------------ */
+
+/* Responsive Flex Layout */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+/* Card Flex Layout - Two cards per row */
+.card-flex {
+    flex: 1 1 calc(50% - 1rem); /* 2 cartes par ligne */
+    min-width: 250px; /* Ajuster la largeur minimale */
+    max-width: 250px; /* Ajuster la largeur maximale des cartes */
+}
+
+/* ------------------ Responsive Layout for Larger Screens ------------------ */
+
+/* Responsive Layout for Larger Screens */
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .lg\:col-span-2 {
+        grid-column: span 2;
+    }
+
+    /* Adjust card layout for larger screens */
+    .card-flex {
+        flex: 1 1 22%;
+    }
+}
+
+/* ------------------ Tablet and Mobile Layout Adjustments ------------------ */
+
+/* Tablet and Mobile Layout Adjustments */
+@media (max-width: 1024px) {
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem; /* Réduit l'espacement entre les cartes */
+        justify-content: center;
+    }
+
+    .card-flex {
+        flex: 1 1 calc(100% - 5rem); /* Ajuste la taille pour les petits écrans */
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+/* ------------------ Further Adjustments for Small Screens (Mobile) ------------------ */
+
+/* Further Adjustments for Small Screens (Mobile) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem; /* Réduit la taille du titre */
+    }
+
+    .card {
+        padding: 1rem; /* Réduit le padding des cartes */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Réduit la taille du titre */
+    }
+
+    .card-value {
+        font-size: 0.75rem; /* Réduit la taille de la valeur */
+    }
+}
