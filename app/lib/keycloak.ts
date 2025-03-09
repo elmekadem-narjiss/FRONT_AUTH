@@ -1,18 +1,12 @@
-import Keycloak from "keycloak-js";
+import Keycloak from 'keycloak-js';
 
-const keycloakConfig = {
-  url: "http://localhost:8080", // Assure-toi qu'il n'y a pas de "/auth"
-  realm: "myrealm",
-  clientId: "my-nodejs-client",
-};
+console.log("✅ Keycloak.ts chargé !"); 
 
-let keycloakInstance: Keycloak | null = null;
+// Définir la configuration de Keycloak
+const keycloak = new Keycloak({
+  url: 'http://localhost:8080',
+  realm: 'myrealm',
+  clientId: 'my-nodejs-client',
+});
 
-if (typeof window !== "undefined") {
-  keycloakInstance = new Keycloak(keycloakConfig);
-  console.log("Keycloak instance créée:", keycloakInstance); // Debug
-} else {
-  console.log("Keycloak n'est pas exécuté côté client.");
-}
-
-export default keycloakInstance;
+export default keycloak;
